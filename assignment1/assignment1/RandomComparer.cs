@@ -17,6 +17,7 @@ namespace assignment1
             {
                 return 0;
             }
+            return _random.Next(-1,1);
         }
     }
 }

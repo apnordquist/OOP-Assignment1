@@ -15,49 +15,49 @@
     </TypeIdentifier>
   </Class>
   <Class Name="assignment1.Microwave" Collapsed="true">
-    <Position X="4" Y="1.75" Width="1.5" />
+    <Position X="10.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Microwave.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="assignment1.MyModernAppliances">
-    <Position X="4.5" Y="7.75" Width="1.5" />
+    <Position X="4" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MyModernAppliances.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="assignment1.ModernAppliances">
-    <Position X="6.5" Y="7.75" Width="1.5" />
+    <Position X="6" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAABAAABAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
       <FileName>ModernAppliances.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="assignment1.Program">
-    <Position X="2.25" Y="7.5" Width="1.5" />
+    <Position X="1.75" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="assignment1.Refrigerator">
-    <Position X="8.25" Y="1.75" Width="1.5" />
+    <Position X="4" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAQBACAAAAEAAAAAEAAABAAEAAAAAABAAAAAAA=</HashCode>
       <FileName>Refrigerator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="assignment1.Vacuum" Collapsed="true">
-    <Position X="10.5" Y="1.75" Width="1.5" />
+    <Position X="8" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Vacuum.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="assignment1.RandomComparer">
-    <Position X="10.75" Y="7.75" Width="1.5" />
+    <Position X="10.75" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAE=</HashCode>
       <FileName>RandomComparer.cs</FileName>

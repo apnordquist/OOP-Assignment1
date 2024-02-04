@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace assignment1
 {
+    //this class is to support each individual type of appliance and their related methods
     abstract class Appliance
     {
         //fields
