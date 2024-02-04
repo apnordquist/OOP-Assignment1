@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="assignment1.Appliance" Collapsed="true">
+    <Position X="6" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Appliance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="assignment1.Dishwasher" Collapsed="true">
+    <Position X="1.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dishwasher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="assignment1.Microwave" Collapsed="true">
+    <Position X="4" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Microwave.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="assignment1.MyModernAppliances" Collapsed="true">
+    <Position X="3.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MyModernAppliances.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="assignment1.ModernAppliances" Collapsed="true">
+    <Position X="6" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModernAppliances.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="assignment1.RandomComparer" Collapsed="true">
+    <Position X="9.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RandomComparer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="assignment1.Program" Collapsed="true">
+    <Position X="2" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="assignment1.Refrigerator" Collapsed="true">
+    <Position X="8.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Refrigerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="assignment1.Vacuum" Collapsed="true">
+    <Position X="10.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vacuum.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
