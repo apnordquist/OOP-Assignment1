@@ -16,6 +16,14 @@
   </Class>
   <Class Name="assignment1.Microwave" Collapsed="true">
     <Position X="10.25" Y="1.75" Width="1.5" />
+    <InheritanceLine Type="assignment1.Appliance" FixedToPoint="true">
+      <Path>
+        <Point X="6.75" Y="1.75" />
+        <Point X="6.75" Y="1.375" />
+        <Point X="11" Y="1.375" />
+        <Point X="11" Y="1.75" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Microwave.cs</FileName>
@@ -24,7 +32,7 @@
   <Class Name="assignment1.MyModernAppliances">
     <Position X="4" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAABAAAAAAABAAAAAAgAAEAAAAIgAAAAAAAAAAAIAA=</HashCode>
+      <HashCode>AAAABAAAAAAABAAAAAQgAAEAAAAIgAAAAAAAAAAAAAA=</HashCode>
       <FileName>MyModernAppliances.cs</FileName>
     </TypeIdentifier>
   </Class>
