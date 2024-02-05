@@ -40,7 +40,7 @@ namespace assignment1
                 Console.WriteLine(appliance.ToString() + "\n");//double check formatting, should be pull each method by type?
             }
         }
-        public void DisplayMenu()
+        public void DisplayMenu() //use this as part of other functions
         {
             Console.WriteLine("Welcome to Modern Appliances!\n" +
                 "How may we assist you?\n" +
