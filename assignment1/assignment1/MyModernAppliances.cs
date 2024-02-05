@@ -130,11 +130,23 @@ namespace assignment1
             Console.WriteLine("How many appliances:\n");
             int numberRandom = int.Parse(Console.ReadLine());
             //return that many random appliances using random comparer
-            for (int i = 0; i < numberRandom; i++) //where to add randomcomaparer?
+            RandomComparer Compare = new RandomComparer();
+            List<Appliance> randomList = new List<Appliance>();
+            static List<T> GenerateRandomList<T>(List<T> Appliances, IComparer<T> comparer) //consulted ChatGPT for help with this
             {
-                foreach (Appliance appliance in Appliances)
+                Random random = new Random();
+
+                // Use OrderBy with the custom comparer to shuffle the list
+                List<T> randomList = Appliances.OrderBy(item => random.Next()).ToList();
+
+                return randomList;
+            }
+            for (int i = 0; i < numberRandom; i++) 
+            {
+                foreach (Appliance appliance in randomList)
                 {
-                    if (selectionRandom == appliance.Number[0];
+                    string applianceNumber = (appliance.Number).ToString();
+                    if (selectionRandom == applianceNumber[0])
                     {
                         randomAppliances.Add(appliance);
                     }
