@@ -17,7 +17,7 @@ namespace assignment1
             Console.WriteLine("Please enter the item number of the appliance:\n");
             long selection = long.Parse(Console.ReadLine()); //customer inputs number
             foreach (Appliance appliance in Appliances) 
-            { if (selection = appliance.Number) //double check this method
+            { if (selection == appliance.Number) 
                 { if (appliance.Quantity > 0) //search to see if available
                     {
                         appliance.Quantity--; //if available decrease quantity by one
@@ -46,8 +46,20 @@ namespace assignment1
         }
         public override void Find()
         {
-            //prompt user to enter a brand
-            //return matching appliances
+            List<Appliance> brandQuery = new List<Appliance>();
+            Console.WriteLine("Please enter the brand you are searching for:\n");
+            string query = Console.ReadLine(); //prompt user to enter a brand
+            foreach (Appliance appliance in Appliances)
+            {
+                if (query == appliance.Brand)
+                {
+                    brandQuery.Add(appliance);
+                }
+            }
+            foreach (Appliance appliance in brandQuery)//return matching appliances in a new list
+            {
+                Console.WriteLine(appliance.ToString);
+            }
         }
         public override void RandomList()
         {
