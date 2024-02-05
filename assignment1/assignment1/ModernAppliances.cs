@@ -22,8 +22,9 @@ namespace assignment1
         //methods
         public abstract void Checkout();
         //create new appliances by class
-        //private Appliance CreateAppliance(long number, string brand, int quantity, int wattage, string color, double price) //unsure why needed since it is an abstract class
+        //private Appliance CreateAppliance(long number, string brand, int quantity, int wattage, string color, double price) 
         //{ Appliance appliance = new Appliance(number, brand, quantity, wattage, color, price); }
+        //unsure why needed since it is an abstract class but is listed in the example
         private Dishwasher CreateDishwasher(long number, string brand, int quantity, int wattage, string color, double price, string feature, string soundRating)
         { Dishwasher dishwasher = new Dishwasher(number, brand, quantity, wattage, color, price, feature, soundRating); }
         private Microwave CreateMicrowave(long number, string brand, int quantity, int wattage, string color, double price)
