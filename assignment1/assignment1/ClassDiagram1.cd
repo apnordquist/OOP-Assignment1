@@ -24,14 +24,14 @@
   <Class Name="assignment1.MyModernAppliances">
     <Position X="4" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAABAAAAAAABAAAAAAgAAEAAAAIgAAAAAAAAAAAIAA=</HashCode>
       <FileName>MyModernAppliances.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="assignment1.ModernAppliances">
     <Position X="6" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAAABAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <HashCode>AAABBYABCQAABAAAABQgAAEAAAAIgAAAAACAQAAAAQA=</HashCode>
       <FileName>ModernAppliances.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -57,7 +57,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="assignment1.RandomComparer">
-    <Position X="10.75" Y="7.25" Width="1.5" />
+    <Position X="8" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAE=</HashCode>
       <FileName>RandomComparer.cs</FileName>

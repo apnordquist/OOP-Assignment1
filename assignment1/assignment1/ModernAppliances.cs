@@ -15,6 +15,10 @@ namespace assignment1
         //properties
         public List<Appliance> Appliances { get; set; }
         //constructor
+        public ModernAppliances()
+        {
+            appliances = ReadAppliances();
+        }
         //methods
         public abstract void Checkout();
         //create new appliances by class
@@ -30,7 +34,12 @@ namespace assignment1
         { Vacuum vacuum = new Vacuum(number, brand, quantity, wattage, color, price); }
         //display methods
         public void DisplayAppliances()
-        { }
+        { 
+            foreach (Appliance appliance in Appliances)
+            {
+                Console.WriteLine(appliance.ToString() + "\n");//double check formatting, should be pull each method by type?
+            }
+        }
         public void DisplayMenu()
         {
             Console.WriteLine("Welcome to Modern Appliances!\n" +
@@ -42,20 +51,43 @@ namespace assignment1
                 "5 - Save & exit\n");
         }
         public void DisplayType()
-        {  }
+        {
+            Console.WriteLine("Appliance Types:\n" +
+                "1 - Refirgerators\n" +
+                "2 - Vacuums\n" +
+                "3 - Microwaves\n" +
+                "4 - Dishwashers\n" +
+                "Enter type of type of appliance:\n");
+            char Selection = char.Parse(Console.ReadLine());
+            switch (Selection) //need to create each display method to test this
+            {
+                case '1':
+                    DisplayRefrigerator();
+                    break;
+                case '2':
+                    DisplayVacuums();
+                    break;
+                case '3':
+                    DisplayMicrowaves();
+                    break;
+                case '4':
+                    DisplayDishwashers();
+                    break;
+                default:
+                    Console.WriteLine("Selection not found.");
+                    break;
+            }
+        }
         public abstract void DisplayDishwashers();
         public abstract void DisplayMicrowaves();
         public abstract void DisplayRefrigerator();
-        public abstract void DisplayVacuum();
+        public abstract void DisplayVacuums();
         //other methods
         public abstract void Find();
         public abstract void RandomList();
-        public void Save()
+        private List<Appliance> ReadAppliances() //create the appliance using the provided text file
         {
-
-        }
-        private void ReadAppliances() //create the appliance using the provided text file
-        {
+            List<Appliance> Appliances = new List<Appliance>();
             string[] lines = File.ReadAllLines(APPLIANCES_TEXT);
             foreach (string line in lines)
             {
@@ -65,24 +97,34 @@ namespace assignment1
                 switch ( firstChar ) 
                 {
                     case '1':
-                        CreateRefrigerator(long.Parse(parts[0]), parts[1], int.Parse(parts[2]), int.Parse(parts[3]), parts[4], double.Parse(parts[5]), int.Parse(parts[6]), int.Parse(parts[7]), int.Parse(parts[8]));
+                        appliances.Add(CreateRefrigerator(long.Parse(parts[0]), parts[1], int.Parse(parts[2]), int.Parse(parts[3]), parts[4], double.Parse(parts[5]), int.Parse(parts[6]), int.Parse(parts[7]), int.Parse(parts[8])));
                         break;
                     case '2':
-                        CreateVacuum(long.Parse(parts[0]), parts[1], int.Parse(parts[2]), int.Parse(parts[3]), parts[4], double.Parse(parts[5]));
+                        appliances.Add(CreateVacuum(long.Parse(parts[0]), parts[1], int.Parse(parts[2]), int.Parse(parts[3]), parts[4], double.Parse(parts[5])));
                         break;
                     case '3':
-                        CreateMicrowave(long.Parse(parts[0]), parts[1], int.Parse(parts[2]), int.Parse(parts[3]), parts[4], double.Parse(parts[5]));
+                        appliances.Add(CreateMicrowave(long.Parse(parts[0]), parts[1], int.Parse(parts[2]), int.Parse(parts[3]), parts[4], double.Parse(parts[5])));
                         break;
                     case '4':
                     case '5':
-                        CreateDishwasher(long.Parse(parts[0]), parts[1], int.Parse(parts[2]), int.Parse(parts[3]), parts[4], double.Parse(parts[5]), parts[6], parts[7]);
+                        appliances.Add(CreateDishwasher(long.Parse(parts[0]), parts[1], int.Parse(parts[2]), int.Parse(parts[3]), parts[4], double.Parse(parts[5]), parts[6], parts[7]));
                         break;
                 }
             }
+            return Appliances;
         }
-        public void ModernAppliances()
+        public void Save() //save the updated text file
         {
+            StreamWriter fileStream = File.CreateText(APPLIANCES_TEXT);
 
+            foreach (Appliance appliance in Appliances)
+            {
+                fileStream.WriteLine(appliance.FormatForFile());
+            }
+
+            fileStream.Close();
+
+            Console.WriteLine("File saved.");
         }
     }
 }
