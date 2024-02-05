@@ -30,7 +30,15 @@ namespace assignment1
         { return $"{Number};{Brand};{Quantity};{Wattage};{Color};{Price};{Doors};{Height};{Width};"; }
         public override string ToString()
         {
-            return $"Item Number: {Number}\nBrand: {Brand}\nQuantity: {Quantity}\nWattage: {Wattage}W\nColor: {Color}\nPrice: ${Price}\nNumber of doors: {Doors}\nHeight: {Height} inches\nWidth: {Width}inches";
+            return $"Item Number: {Number}\n" +
+                $"Brand: {Brand}\n" +
+                $"Quantity: {Quantity}\n" +
+                $"Wattage: {Wattage}W\n" +
+                $"Color: {Color}\n" +
+                $"Price: ${Price}\n" +
+                $"Number of doors: {Doors}\n" +
+                $"Height: {Height} inches\n" +
+                $"Width: {Width}inches";
         }
     }
 }

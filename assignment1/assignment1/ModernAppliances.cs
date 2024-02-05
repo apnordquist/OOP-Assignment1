@@ -18,8 +18,8 @@ namespace assignment1
         //methods
         public abstract void Checkout();
         //create new appliances by class
-        private Appliance CreateAppliance(long number, string brand, int quantity, int wattage, string color, double price)
-        { Appliance appliance = new Appliance(number, brand, quantity,wattage,color,price); }
+        //private Appliance CreateAppliance(long number, string brand, int quantity, int wattage, string color, double price) //unsure why needed since it is an abstract class
+        //{ Appliance appliance = new Appliance(number, brand, quantity, wattage, color, price); }
         private Dishwasher CreateDishwasher(long number, string brand, int quantity, int wattage, string color, double price, string feature, string soundRating)
         { Dishwasher dishwasher = new Dishwasher(number, brand, quantity, wattage, color, price, feature, soundRating); }
         private Microwave CreateMicrowave(long number, string brand, int quantity, int wattage, string color, double price)
@@ -42,7 +42,7 @@ namespace assignment1
                 "5 - Save & exit\n");
         }
         public void DisplayType()
-        { }
+        {  }
         public abstract void DisplayDishwashers();
         public abstract void DisplayMicrowaves();
         public abstract void DisplayRefrigerator();
@@ -65,17 +65,18 @@ namespace assignment1
                 switch ( firstChar ) 
                 {
                     case '1':
-                        CreateRefrigerator(long.Parse(parts[0]), parts[1], int.Parse(parts[2]), int.Parse(parts[3]), parts[4], double.Parse(parts[5]), bool.Parse(parts[6]), int.Parse(parts[7]), int.Parse(parts[8]), int.Parse(parts[9]));
+                        CreateRefrigerator(long.Parse(parts[0]), parts[1], int.Parse(parts[2]), int.Parse(parts[3]), parts[4], double.Parse(parts[5]), int.Parse(parts[6]), int.Parse(parts[7]), int.Parse(parts[8]));
+                        break;
                     case '2':
-                        CreateVacuum();
+                        CreateVacuum(long.Parse(parts[0]), parts[1], int.Parse(parts[2]), int.Parse(parts[3]), parts[4], double.Parse(parts[5]));
+                        break;
                     case '3':
-                        CreateMicrowave();
+                        CreateMicrowave(long.Parse(parts[0]), parts[1], int.Parse(parts[2]), int.Parse(parts[3]), parts[4], double.Parse(parts[5]));
+                        break;
                     case '4':
                     case '5':
-                        CreateDishwasher();
-                    case default:
-                        CreateAppliance();
-
+                        CreateDishwasher(long.Parse(parts[0]), parts[1], int.Parse(parts[2]), int.Parse(parts[3]), parts[4], double.Parse(parts[5]), parts[6], parts[7]);
+                        break;
                 }
             }
         }

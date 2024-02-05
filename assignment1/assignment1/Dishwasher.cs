@@ -18,7 +18,30 @@ namespace assignment1
         //properties
         public string Feature { get; set; }
         public string SoundRating { get; set; }
-        public string SoundRatingDisplay { get; set; }
+        public string SoundRatingDisplay
+        {
+            get
+            {
+                switch (_soundRating)
+                {
+                    case "M":
+                        return "Moderate";
+                        break;
+                    case "Qu":
+                        return "Quiet";
+                        break;
+                    case "Qr":
+                        return "Queiter";
+                        break;
+                    case "Qt":
+                        return "Quietest";
+                        break;
+                    default:
+                        return "Unkown";
+                        break;
+                }
+            }
+        }
         //constructor
         public Dishwasher(long number, string brand, int quantity, int wattage, string color, double price, string feature, string soundRating) : base(number, brand, quantity, wattage, color, price)
         {
@@ -32,7 +55,14 @@ namespace assignment1
         { return $";"; }
         public override string ToString()
         {
-            return base.ToString();
+            return $"Item Number: {Number}\n" +
+                $"Brand: {Brand}\n" +
+                $"Quantity: {Quantity}\n" +
+                $"Wattage: {Wattage}W\n" +
+                $"Color: {Color}\n" +
+                $"Price: ${Price}\n" +
+                $"Features: {Feature}\n" +
+                $"Sound Rating: {SoundRatingDisplay}\n";
         }
     }
 }

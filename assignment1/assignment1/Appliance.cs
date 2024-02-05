@@ -33,7 +33,33 @@ namespace assignment1
                 { return false; }
             }
         }
-        public string Type { get; set; }
+        public string Type 
+        { 
+            get
+            { 
+                string itemString = _number.ToString();
+                char firstChar = itemString[0];
+                switch (firstChar)
+                {
+                    case '1':
+                        return "Refrigerator";
+                        break;
+                    case '2':
+                        return "Vacuum";
+                        break;
+                    case '3':
+                        return "Microwave";
+                        break;
+                    case '4':
+                    case '5':
+                        return "Dishwasher";
+                        break;
+                    default:
+                        return "Unknown";
+                        break;
+                } 
+            }
+        }
         //default constructor
         public Appliance(long number, string brand, int quantity, int wattage, string color, double price) 
         {
@@ -47,7 +73,7 @@ namespace assignment1
         //methods
         public void Checkout()
         {
-            _quantity -= 1;
+            _quantity -= 1; //place holder until I figure it out
 /*            List<Appliance> AppList = new List<Appliance>();
             Console.WriteLine("Enter the item number of an appliance:\n");
             string AppCheck = Console.ReadLine(); //customer inputs item number
