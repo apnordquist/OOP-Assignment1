@@ -18,21 +18,29 @@ namespace assignment1
         //methods
         public abstract void Checkout();
         //create new appliances by class
-        private Appliance CreateAppliance()
-        { Appliance appliance = new Appliance(); }
-        private Dishwasher CreateDishwasher()
-        { Dishwasher dishwasher = new Dishwasher(); }
-        private Microwave CreateMicrowave()
-        { Microwave microwave = new Microwave(); }
-        private Refrigerator CreateRefrigerator()
-        { Refrigerator refrigerator = new Refrigerator(); }
-        private Vacuum CreateVacuum()
-        { Vacuum vacuum = new Vacuum(); }
+        private Appliance CreateAppliance(long number, string brand, int quantity, int wattage, string color, double price)
+        { Appliance appliance = new Appliance(number, brand, quantity,wattage,color,price); }
+        private Dishwasher CreateDishwasher(long number, string brand, int quantity, int wattage, string color, double price, string feature, string soundRating)
+        { Dishwasher dishwasher = new Dishwasher(number, brand, quantity, wattage, color, price, feature, soundRating); }
+        private Microwave CreateMicrowave(long number, string brand, int quantity, int wattage, string color, double price)
+        { Microwave microwave = new Microwave(number, brand, quantity, wattage, color, price); }
+        private Refrigerator CreateRefrigerator(long number, string brand, int quantity, int wattage, string color, double price, int doors, int height, int width)
+        { Refrigerator refrigerator = new Refrigerator(number, brand, quantity, wattage, color, price, doors, height, width); }
+        private Vacuum CreateVacuum(long number, string brand, int quantity, int wattage, string color, double price)
+        { Vacuum vacuum = new Vacuum(number, brand, quantity, wattage, color, price); }
         //display methods
         public void DisplayAppliances()
-        {}
-        public void DisplayMenu()
         { }
+        public void DisplayMenu()
+        {
+            Console.WriteLine("Welcome to Modern Appliances!\n" +
+                "How may we assist you?\n" +
+                "1 - Check out appliance\n" +
+                "2 - Find appliances by brand\n" +
+                "3 - Display appliances by type\n" +
+                "4 - Produce random appliance list\n" +
+                "5 - Save & exit\n");
+        }
         public void DisplayType()
         { }
         public abstract void DisplayDishwashers();
@@ -46,9 +54,30 @@ namespace assignment1
         {
 
         }
-        private void ReadAppliances()
+        private void ReadAppliances() //create the appliance using the provided text file
         {
+            string[] lines = File.ReadAllLines(APPLIANCES_TEXT);
+            foreach (string line in lines)
+            {
+                string[] parts = line.Split(';');
+                string p = parts[0];
+                char firstChar = p[0];
+                switch ( firstChar ) 
+                {
+                    case '1':
+                        CreateRefrigerator(long.Parse(parts[0]), parts[1], int.Parse(parts[2]), int.Parse(parts[3]), parts[4], double.Parse(parts[5]), bool.Parse(parts[6]), int.Parse(parts[7]), int.Parse(parts[8]), int.Parse(parts[9]));
+                    case '2':
+                        CreateVacuum();
+                    case '3':
+                        CreateMicrowave();
+                    case '4':
+                    case '5':
+                        CreateDishwasher();
+                    case default:
+                        CreateAppliance();
 
+                }
+            }
         }
         public void ModernAppliances()
         {

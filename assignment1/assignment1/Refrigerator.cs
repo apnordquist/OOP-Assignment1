@@ -17,7 +17,7 @@ namespace assignment1
         public int Height { get; set; }
         public int Width { get; set; }
         //constructor
-        public Refrigerator(long number, string brand, int quantity, int wattage, string color, double price, bool available, string type, int doors, int height, int width) : base(number, brand, quantity, wattage, color, price, available, type)
+        public Refrigerator(long number, string brand, int quantity, int wattage, string color, double price, int doors, int height, int width) : base(number, brand, quantity, wattage, color, price)
         {
             Doors = doors;
             Height = height;

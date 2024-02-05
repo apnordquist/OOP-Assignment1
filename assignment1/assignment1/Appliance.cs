@@ -23,10 +23,19 @@ namespace assignment1
         public int Wattage { get; set; }
         public string Color { get; set; }
         public double Price { get; set; }
-        public bool IsAvailable { get; set; }
+        public bool IsAvailable
+        {
+            get
+            {
+                if (_quantity > 0)
+                { return true; }
+                else
+                { return false; }
+            }
+        }
         public string Type { get; set; }
         //default constructor
-        public Appliance(long number, string brand, int quantity, int wattage, string color, double price, bool available, string type) 
+        public Appliance(long number, string brand, int quantity, int wattage, string color, double price) 
         {
             Number = number;
             Brand = brand;
@@ -34,8 +43,6 @@ namespace assignment1
             Wattage = wattage;
             Color = color;
             Price = price;
-            IsAvailable = available;
-            Type = type;
         }
         //methods
         public void Checkout()

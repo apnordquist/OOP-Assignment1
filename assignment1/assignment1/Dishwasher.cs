@@ -20,7 +20,7 @@ namespace assignment1
         public string SoundRating { get; set; }
         public string SoundRatingDisplay { get; set; }
         //constructor
-        public Dishwasher(long number, string brand, int quantity, int wattage, string color, double price, bool available, string type, string feature, string soundRating) : base(number, brand, quantity, wattage, color, price, available, type)
+        public Dishwasher(long number, string brand, int quantity, int wattage, string color, double price, string feature, string soundRating) : base(number, brand, quantity, wattage, color, price)
         {
             Feature = feature; 
             SoundRating = soundRating;
