@@ -23,8 +23,6 @@ namespace assignment1
             Height = height;
             Width = width;
         }
-        //getters
-        //setters
         //methods
         public override string FormatForFile()
         { return $"{Number};{Brand};{Quantity};{Wattage};{Color};{Price};{Doors};{Height};{Width};"; }

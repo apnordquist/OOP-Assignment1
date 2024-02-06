@@ -8,5 +8,44 @@ namespace assignment1
 {
     internal class Microwave: Appliance
     {
+        //fields
+        private double _capacity;
+        private string _roomType;
+        const string _roomKitchen = "K";
+        const string _roomWorkSite = "W";
+        //properties
+        public double Capacity { get; set; }
+        public string RoomType { get; set; }
+        public string RoomTypeDescription { 
+            get
+            { 
+                if (_roomType == _roomKitchen)
+                    { return "Kitchen"; } 
+                if (_roomType == _roomWorkSite)
+                    { return "Work Site"; }
+                else 
+                    { return "Unkown"; }
+            }
+            }
+        //constructor
+        public Microwave(long number, string brand, int quantity, int wattage, string color, double price, double capacity, string roomType) : base(number, brand, quantity, wattage, color, price)
+        {
+            Capacity = capacity;
+            RoomType = roomType;
+        }
+        //methods
+        public override string FormatForFile()
+        { return $"{Number};{Brand};{Quantity};{Wattage};{Color};{Price};{Capacity};{RoomType};"; }
+        public override string ToString()
+        {
+            return $"Item Number: {Number}\n" +
+                $"Brand: {Brand}\n" +
+                $"Quantity: {Quantity}\n" +
+                $"Wattage: {Wattage}W\n" +
+                $"Color: {Color}\n" +
+                $"Price: ${Price}\n" +
+                $"Capacity: {Capacity}\n" +
+                $"Room: {RoomTypeDescription}";
+        }
     }
 }

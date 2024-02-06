@@ -25,7 +25,7 @@ namespace assignment1
                         Console.WriteLine(appliance.ToString()); //display appliance info
                     }
                 }
-            else { Console.WriteLine("Appliance not available"); } //otherwise, display appliance is not
+            else { Console.WriteLine("Appliance not available"); } //otherwise, display appliance is not available
             }
         }
         public override void DisplayDishwashers()
@@ -73,13 +73,30 @@ namespace assignment1
         }
         public override void DisplayMicrowaves()
         {
-            
+            //prompt user to enter a field
+            List<Appliance> microwaveList = new List<Appliance>();
+            Console.WriteLine("Which room are you looking for:\n" +
+                "K - Kitchen\n" +
+                "W - Work Site\n" +
+                "Enter selection:\n");
+            string roomSelect = Console.ReadLine();
+            foreach (Appliance appliance in Appliances) // put microwave in list based on criteria
+            {
+                if (roomSelect == ((Microwave)appliance).RoomType)
+                {
+                    microwaveList.Add(appliance);
+                }
+            }
+            //return details of all appliances that match
+            foreach (Appliance appliance in microwaveList)
+            {
+                Console.WriteLine(appliance.ToString());
+            }
         }
         public override void DisplayRefrigerator()
         {
             List<Appliance> refrigeratorList = new List<Appliance>();
-            string searchDoors = "";
-            Console.WriteLine("How many doors:\n";
+            Console.WriteLine("How many doors:\n");
             int doorSelect = int.Parse(Console.ReadLine());
             foreach (Appliance appliance in Appliances) // put dishwasher in list based on criteria
             {
@@ -96,7 +113,35 @@ namespace assignment1
         }
         public override void DisplayVacuums()
         {
-            
+            //prompt user to enter a field
+            List<Appliance> vacuumList = new List<Appliance>();
+            Console.WriteLine("What kind of battery:\n" +
+                "1 - 18v\n" +
+                "2 - 24v\n" +
+                "Enter selection:\n");
+            string voltSelect = Console.ReadLine();
+            foreach (Appliance appliance in Appliances) // put vacuum in list based on criteria
+            {
+                if (voltSelect == "1")
+                {
+                    if ("18" == ((Vacuum)appliance).BatteryVoltage)
+                    {
+                        vacuumList.Add(appliance);
+                    }
+                }
+                if (voltSelect == "2")
+                {
+                    if ("24" == ((Vacuum)appliance).BatteryVoltage)
+                    {
+                        vacuumList.Add(appliance);
+                    }
+                }
+            }
+            //return details of all appliances that match
+            foreach (Appliance appliance in vacuumList)
+            {
+                Console.WriteLine(appliance.ToString());
+            }
         }
         public override void Find()
         {

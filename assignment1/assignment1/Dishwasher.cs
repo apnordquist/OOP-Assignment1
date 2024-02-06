@@ -24,16 +24,16 @@ namespace assignment1
             {
                 switch (_soundRating)
                 {
-                    case "M":
+                    case _SoundRatingModerate:
                         return "Moderate";
                         break;
-                    case "Qu":
+                    case _SoundRatingQuiet:
                         return "Quiet";
                         break;
-                    case "Qr":
+                    case _SoundRatingQuieter:
                         return "Queiter";
                         break;
-                    case "Qt":
+                    case _SoundRatingQuietest:
                         return "Quietest";
                         break;
                     default:
@@ -48,8 +48,6 @@ namespace assignment1
             Feature = feature; 
             SoundRating = soundRating;
         }
-        //setters
-        //getters
         //methods
         public override string FormatForFile()
         { return $";"; }
