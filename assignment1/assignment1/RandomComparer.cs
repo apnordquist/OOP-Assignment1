@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace assignment1
 {
-    internal class RandomComparer
+    internal class  RandomComparer : IComparer<Appliance>
     {
+        //fields
+        private Random _random = new Random();
+        //methods
+        public int Compare(Appliance x, Appliance y)
+        {
+            if (x == y)
+            {
+                return 0;
+            }
+            return _random.Next(-1,1);
+        }
     }
 }
