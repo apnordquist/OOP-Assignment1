@@ -26,13 +26,25 @@ namespace assignment1
         //{ Appliance appliance = new Appliance(number, brand, quantity, wattage, color, price); }
         //unsure why needed since it is an abstract class but is listed in the example
         private Dishwasher CreateDishwasher(long number, string brand, int quantity, int wattage, string color, double price, string feature, string soundRating)
-        { return new Dishwasher(number, brand, quantity, wattage, color, price, feature, soundRating); }
+        { 
+            Dishwasher dishwasher = new Dishwasher(number, brand, quantity, wattage, color, price, feature, soundRating);
+            return dishwasher;
+        }
         private Microwave CreateMicrowave(long number, string brand, int quantity, int wattage, string color, double price, double capacity, string roomType)
-        { return new Microwave(number, brand, quantity, wattage, color, price, capacity, roomType); }
+        { 
+            Microwave microwave = new Microwave(number, brand, quantity, wattage, color, price, capacity, roomType); 
+            return microwave;
+        }
         private Refrigerator CreateRefrigerator(long number, string brand, int quantity, int wattage, string color, double price, int doors, int height, int width)
-        { return new Refrigerator(number, brand, quantity, wattage, color, price, doors, height, width); }
+        { 
+            Refrigerator refrigerator = new Refrigerator(number, brand, quantity, wattage, color, price, doors, height, width);
+            return refrigerator;
+        }
         private Vacuum CreateVacuum(long number, string brand, int quantity, int wattage, string color, double price, string grade, string voltage)
-        { return new Vacuum(number, brand, quantity, wattage, color, price, grade, voltage); }
+        { 
+            Vacuum vacuum = new Vacuum(number, brand, quantity, wattage, color, price, grade, voltage);
+            return vacuum;
+        }
         //display methods
         public void DisplayAppliances()
         { 
@@ -88,7 +100,7 @@ namespace assignment1
         public abstract void RandomList();
         private List<Appliance> ReadAppliances() //create the appliance using the provided text file
         {
-            List<Appliance> Appliances = new List<Appliance>();
+            List<Appliance> appliances = new List<Appliance>();
             string[] lines = File.ReadAllLines(APPLIANCES_TEXT);
             foreach (string line in lines)
             {
@@ -112,13 +124,13 @@ namespace assignment1
                         break;
                 }
             }
-            return Appliances;
+            return appliances;
         }
         public void Save() //save the updated text file
         {
             StreamWriter fileStream = File.CreateText(APPLIANCES_TEXT);
 
-            foreach (Appliance appliance in Appliances)
+            foreach (Appliance appliance in appliances)
             {
                 fileStream.WriteLine(appliance.FormatForFile());
             }
