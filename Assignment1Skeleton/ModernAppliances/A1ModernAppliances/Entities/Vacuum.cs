@@ -1,4 +1,4 @@
-﻿using ModernAppliances.Entities.Abstract;
+using ModernAppliances.Entities.Abstract;
 
 namespace ModernAppliances.Entities
 {
