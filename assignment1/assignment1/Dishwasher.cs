@@ -11,10 +11,10 @@ namespace assignment1
         //fields
         private string _feature;
         private string _soundRating;
-        const string _SoundRatingModerate = "M";
-        const string _SoundRatingQuiet = "Qu";
-        const string _SoundRatingQuieter = "Qr";
-        const string _SoundRatingQuietest = "Qt";
+        public const string SoundRatingModerate = "M";
+        public const string SoundRatingQuiet = "Qu";
+        public const string SoundRatingQuieter = "Qr";
+        public const string SoundRatingQuietest = "Qt";
         //properties
         public string Feature { get; set; }
         public string SoundRating { get; set; }
@@ -22,18 +22,18 @@ namespace assignment1
         {
             get
             {
-                switch (_soundRating)
+                switch (SoundRating) //find display based on constant
                 {
-                    case _SoundRatingModerate:
+                    case SoundRatingModerate:
                         return "Moderate";
                         break;
-                    case _SoundRatingQuiet:
+                    case SoundRatingQuiet:
                         return "Quiet";
                         break;
-                    case _SoundRatingQuieter:
+                    case SoundRatingQuieter:
                         return "Queiter";
                         break;
-                    case _SoundRatingQuietest:
+                    case SoundRatingQuietest:
                         return "Quietest";
                         break;
                     default:

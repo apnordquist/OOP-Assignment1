@@ -31,8 +31,8 @@ namespace assignment1
                 $"Wattage: {Wattage}W\n" +
                 $"Color: {Color}\n" +
                 $"Price: ${Price}\n" +
-                $"Voltage: {BatteryVoltage}\n" +
-                $"Grade: {Grade}";
+                $"Voltage: {BatteryVoltage}V\n" +
+                $"Grade: {Grade}\n";
         }
     }
 }

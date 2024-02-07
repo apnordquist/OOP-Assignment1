@@ -11,17 +11,17 @@ namespace assignment1
         //fields
         private double _capacity;
         private string _roomType;
-        const string _roomKitchen = "K";
-        const string _roomWorkSite = "W";
+        public const string roomKitchen = "K";
+        public const string roomWorkSite = "W";
         //properties
         public double Capacity { get; set; }
         public string RoomType { get; set; }
         public string RoomTypeDescription { 
             get
             { 
-                if (_roomType == _roomKitchen)
+                if (_roomType == roomKitchen)
                     { return "Kitchen"; } 
-                if (_roomType == _roomWorkSite)
+                if (_roomType == roomWorkSite)
                     { return "Work Site"; }
                 else 
                     { return "Unkown"; }
@@ -45,7 +45,7 @@ namespace assignment1
                 $"Color: {Color}\n" +
                 $"Price: ${Price}\n" +
                 $"Capacity: {Capacity}\n" +
-                $"Room: {RoomTypeDescription}";
+                $"Room: {RoomTypeDescription}\n";
         }
     }
 }

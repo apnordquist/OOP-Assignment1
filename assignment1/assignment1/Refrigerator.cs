@@ -36,7 +36,7 @@ namespace assignment1
                 $"Price: ${Price}\n" +
                 $"Number of doors: {Doors}\n" +
                 $"Height: {Height} inches\n" +
-                $"Width: {Width} inches";
+                $"Width: {Width} inches\n";
         }
     }
 }
