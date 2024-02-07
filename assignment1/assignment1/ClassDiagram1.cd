@@ -10,11 +10,11 @@
   <Class Name="assignment1.Dishwasher">
     <Position X="1.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAAAAAAQAAAAAAAEAAAAAAgBAAAAIAACAQAAKAAABAA=</HashCode>
+      <HashCode>AAAAAAAQAAAAAAAEQAAAAAgBAAAAAAACAAAAKAACIAI=</HashCode>
       <FileName>Dishwasher.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="assignment1.Microwave" Collapsed="true">
+  <Class Name="assignment1.Microwave">
     <Position X="10.25" Y="1.75" Width="1.5" />
     <InheritanceLine Type="assignment1.Appliance" FixedToPoint="true">
       <Path>
@@ -25,15 +25,8 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAQAAAAAAAGAAAAAAQCIAAEAAAAAAAAAAAAAgA=</HashCode>
       <FileName>Microwave.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="assignment1.MyModernAppliances">
-    <Position X="4" Y="7.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAABAAAAAAABAAAAAQgAAEAAAAIgAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MyModernAppliances.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="assignment1.ModernAppliances">
@@ -57,10 +50,10 @@
       <FileName>Refrigerator.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="assignment1.Vacuum" Collapsed="true">
+  <Class Name="assignment1.Vacuum">
     <Position X="8" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAQAAAAAgAEgAAAAAAAAAAAAACAAAAAAAEAAAA=</HashCode>
       <FileName>Vacuum.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -71,6 +64,13 @@
       <FileName>RandomComparer.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="assignment1.MyModernAppliances">
+    <Position X="4" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAABAAAAAQgAAEAAAAIgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MyModernAppliances.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

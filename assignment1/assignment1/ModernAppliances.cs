@@ -13,7 +13,13 @@ namespace assignment1
         private List<Appliance> appliances;
         const string APPLIANCES_TEXT = "appliances.txt"; //default file
         //properties
-        public List<Appliance> Appliances { get; set; }
+        public List<Appliance> Appliances
+        {
+            get
+            {
+                return new List<Appliance>(appliances);
+            }
+        }
         //constructor
         public ModernAppliances()
         {
@@ -26,13 +32,25 @@ namespace assignment1
         //{ Appliance appliance = new Appliance(number, brand, quantity, wattage, color, price); }
         //unsure why needed since it is an abstract class but is listed in the example
         private Dishwasher CreateDishwasher(long number, string brand, int quantity, int wattage, string color, double price, string feature, string soundRating)
-        { Dishwasher dishwasher = new Dishwasher(number, brand, quantity, wattage, color, price, feature, soundRating); }
-        private Microwave CreateMicrowave(long number, string brand, int quantity, int wattage, string color, double price)
-        { Microwave microwave = new Microwave(number, brand, quantity, wattage, color, price); }
+        { 
+            Dishwasher dishwasher = new Dishwasher(number, brand, quantity, wattage, color, price, feature, soundRating);
+            return dishwasher;
+        }
+        private Microwave CreateMicrowave(long number, string brand, int quantity, int wattage, string color, double price, double capacity, string roomType)
+        { 
+            Microwave microwave = new Microwave(number, brand, quantity, wattage, color, price, capacity, roomType); 
+            return microwave;
+        }
         private Refrigerator CreateRefrigerator(long number, string brand, int quantity, int wattage, string color, double price, int doors, int height, int width)
-        { Refrigerator refrigerator = new Refrigerator(number, brand, quantity, wattage, color, price, doors, height, width); }
-        private Vacuum CreateVacuum(long number, string brand, int quantity, int wattage, string color, double price)
-        { Vacuum vacuum = new Vacuum(number, brand, quantity, wattage, color, price); }
+        { 
+            Refrigerator refrigerator = new Refrigerator(number, brand, quantity, wattage, color, price, doors, height, width);
+            return refrigerator;
+        }
+        private Vacuum CreateVacuum(long number, string brand, int quantity, int wattage, string color, double price, string grade, string voltage)
+        { 
+            Vacuum vacuum = new Vacuum(number, brand, quantity, wattage, color, price, grade, voltage);
+            return vacuum;
+        }
         //display methods
         public void DisplayAppliances()
         { 
@@ -88,7 +106,7 @@ namespace assignment1
         public abstract void RandomList();
         private List<Appliance> ReadAppliances() //create the appliance using the provided text file
         {
-            List<Appliance> Appliances = new List<Appliance>();
+            List<Appliance> appliances = new List<Appliance>();
             string[] lines = File.ReadAllLines(APPLIANCES_TEXT);
             foreach (string line in lines)
             {
@@ -101,10 +119,10 @@ namespace assignment1
                         appliances.Add(CreateRefrigerator(long.Parse(parts[0]), parts[1], int.Parse(parts[2]), int.Parse(parts[3]), parts[4], double.Parse(parts[5]), int.Parse(parts[6]), int.Parse(parts[7]), int.Parse(parts[8])));
                         break;
                     case '2':
-                        appliances.Add(CreateVacuum(long.Parse(parts[0]), parts[1], int.Parse(parts[2]), int.Parse(parts[3]), parts[4], double.Parse(parts[5])));
+                        appliances.Add(CreateVacuum(long.Parse(parts[0]), parts[1], int.Parse(parts[2]), int.Parse(parts[3]), parts[4], double.Parse(parts[5]), parts[6], parts[7]));
                         break;
                     case '3':
-                        appliances.Add(CreateMicrowave(long.Parse(parts[0]), parts[1], int.Parse(parts[2]), int.Parse(parts[3]), parts[4], double.Parse(parts[5])));
+                        appliances.Add(CreateMicrowave(long.Parse(parts[0]), parts[1], int.Parse(parts[2]), int.Parse(parts[3]), parts[4], double.Parse(parts[5]), double.Parse(parts[6]), parts[7]));
                         break;
                     case '4':
                     case '5':
@@ -112,19 +130,16 @@ namespace assignment1
                         break;
                 }
             }
-            return Appliances;
+            return appliances;
         }
         public void Save() //save the updated text file
         {
             StreamWriter fileStream = File.CreateText(APPLIANCES_TEXT);
-
-            foreach (Appliance appliance in Appliances)
+            foreach (Appliance appliance in appliances)
             {
                 fileStream.WriteLine(appliance.FormatForFile());
             }
-
             fileStream.Close();
-
             Console.WriteLine("File saved.");
         }
     }

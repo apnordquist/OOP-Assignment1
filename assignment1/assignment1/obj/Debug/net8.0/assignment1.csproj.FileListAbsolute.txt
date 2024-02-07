@@ -3,3 +3,13 @@ C:\Users\apnor\CPRG211\Assignment1\assignment1\assignment1\obj\Debug\net8.0\assi
 C:\Users\apnor\CPRG211\Assignment1\assignment1\assignment1\obj\Debug\net8.0\assignment1.AssemblyInfo.cs
 C:\Users\apnor\CPRG211\Assignment1\assignment1\assignment1\obj\Debug\net8.0\assignment1.csproj.CoreCompileInputs.cache
 C:\Users\apnor\CPRG211\Assignment1\assignment1\assignment1\obj\Debug\net8.0\assignment1.sourcelink.json
+C:\Users\apnor\CPRG211\Assignment1\assignment1\assignment1\bin\Debug\net8.0\assignment1.exe
+C:\Users\apnor\CPRG211\Assignment1\assignment1\assignment1\bin\Debug\net8.0\assignment1.deps.json
+C:\Users\apnor\CPRG211\Assignment1\assignment1\assignment1\bin\Debug\net8.0\assignment1.runtimeconfig.json
+C:\Users\apnor\CPRG211\Assignment1\assignment1\assignment1\bin\Debug\net8.0\assignment1.dll
+C:\Users\apnor\CPRG211\Assignment1\assignment1\assignment1\bin\Debug\net8.0\assignment1.pdb
+C:\Users\apnor\CPRG211\Assignment1\assignment1\assignment1\obj\Debug\net8.0\assignment1.dll
+C:\Users\apnor\CPRG211\Assignment1\assignment1\assignment1\obj\Debug\net8.0\refint\assignment1.dll
+C:\Users\apnor\CPRG211\Assignment1\assignment1\assignment1\obj\Debug\net8.0\assignment1.pdb
+C:\Users\apnor\CPRG211\Assignment1\assignment1\assignment1\obj\Debug\net8.0\assignment1.genruntimeconfig.cache
+C:\Users\apnor\CPRG211\Assignment1\assignment1\assignment1\obj\Debug\net8.0\ref\assignment1.dll

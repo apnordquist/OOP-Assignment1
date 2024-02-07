@@ -5,13 +5,11 @@
         static void Main(string[] args)
         {
             ModernAppliances modernAppliances = new MyModernAppliances();
-
-            while (option != ModernAppliances.Options.SaveExit)
+            char option = 'n';
+            while (option != '5')
             {
                 modernAppliances.DisplayMenu();
-
-                char option = char.Parse(Console.ReadLine());
-
+                option = char.Parse(Console.ReadLine());
                 switch (option)
                 {
                     case '1':
