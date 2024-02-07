@@ -18,14 +18,16 @@ namespace assignment1
             Console.WriteLine("Please enter the item number of the appliance:\n");
             long selection = long.Parse(Console.ReadLine()); //customer inputs number
             foreach (Appliance appliance in Appliances) 
-            { if (selection == appliance.Number) 
-                { if (appliance.Quantity > 0) //search to see if available
+            { if (selection == appliance.Number)
+                { 
+                    if (appliance.Quantity > 0) //search to see if available
                     {
                         appliance.Quantity--; //if available decrease quantity by one
                         Console.WriteLine(appliance.ToString()); //display appliance info
                     }
+                    else
+                    { Console.WriteLine("Appliance not available"); }//otherwise, display appliance is not available
                 }
-            else { Console.WriteLine("Appliance not available"); } //otherwise, display appliance is not available
             }
         }
         public override void DisplayDishwashers()
@@ -60,10 +62,10 @@ namespace assignment1
             }
             foreach (Appliance appliance in Appliances) // put dishwasher in list based on criteria
             {
-                if (searchSound == ((Dishwasher)appliance).SoundRating)
-                {
-                    dishwasherList.Add(appliance);
-                }
+                if (appliance is Dishwasher && searchSound == ((Dishwasher)appliance).SoundRating)
+                    {
+                        dishwasherList.Add(appliance);
+                    }
             }
             //return details of all appliances that match
             foreach(Appliance appliance in dishwasherList)
@@ -82,10 +84,10 @@ namespace assignment1
             string roomSelect = Console.ReadLine();
             foreach (Appliance appliance in Appliances) // put microwave in list based on criteria
             {
-                if (roomSelect == ((Microwave)appliance).RoomType)
-                {
-                    microwaveList.Add(appliance);
-                }
+                if (appliance is Microwave && roomSelect == ((Microwave)appliance).RoomType)
+                    {
+                        microwaveList.Add(appliance);
+                    }
             }
             //return details of all appliances that match
             foreach (Appliance appliance in microwaveList)
@@ -100,9 +102,9 @@ namespace assignment1
             int doorSelect = int.Parse(Console.ReadLine());
             foreach (Appliance appliance in Appliances) // put dishwasher in list based on criteria
             {
-                if (doorSelect == ((Refrigerator)appliance).Doors)
+                if (appliance is Refrigerator && doorSelect == ((Refrigerator)appliance).Doors)
                 {
-                    refrigeratorList.Add(appliance);
+                        refrigeratorList.Add(appliance);
                 }
             }
             //return details of all appliances that match
@@ -122,19 +124,16 @@ namespace assignment1
             string voltSelect = Console.ReadLine();
             foreach (Appliance appliance in Appliances) // put vacuum in list based on criteria
             {
-                if (voltSelect == "1")
+                if (appliance is Vacuum)
                 {
-                    if ("18" == ((Vacuum)appliance).BatteryVoltage)
-                    {
-                        vacuumList.Add(appliance);
-                    }
-                }
-                if (voltSelect == "2")
-                {
-                    if ("24" == ((Vacuum)appliance).BatteryVoltage)
-                    {
-                        vacuumList.Add(appliance);
-                    }
+                    if (voltSelect == "1" && "18" == ((Vacuum)appliance).BatteryVoltage)
+                        {
+                            vacuumList.Add(appliance);
+                        }
+                    if (voltSelect == "2" && "24" == ((Vacuum)appliance).BatteryVoltage)
+                        {
+                            vacuumList.Add(appliance);
+                        }
                 }
             }
             //return details of all appliances that match
@@ -157,7 +156,14 @@ namespace assignment1
             }
             foreach (Appliance appliance in brandQuery)//return matching appliances in a new list
             {
-                Console.WriteLine(appliance.ToString);
+                if (appliance is Dishwasher)
+                    Console.WriteLine(((Dishwasher)appliance).ToString());
+                if (appliance is Microwave)
+                    Console.WriteLine(((Microwave)appliance).ToString());
+                if (appliance is Refrigerator)
+                    Console.WriteLine(((Refrigerator)appliance).ToString());
+                if (appliance is Vacuum)
+                    Console.WriteLine(((Vacuum)appliance).ToString());
             }
         }
         public override void RandomList()

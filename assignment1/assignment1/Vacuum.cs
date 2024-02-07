@@ -32,7 +32,7 @@ namespace assignment1
                 $"Color: {Color}\n" +
                 $"Price: ${Price}\n" +
                 $"Voltage: {BatteryVoltage}\n" +
-                $"Grade: {Grade}\n";
+                $"Grade: {Grade}";
         }
     }
 }

@@ -13,7 +13,13 @@ namespace assignment1
         private List<Appliance> appliances;
         const string APPLIANCES_TEXT = "appliances.txt"; //default file
         //properties
-        public List<Appliance> Appliances { get; set; }
+        public List<Appliance> Appliances
+        {
+            get
+            {
+                return new List<Appliance>(appliances);
+            }
+        }
         //constructor
         public ModernAppliances()
         {
@@ -129,14 +135,11 @@ namespace assignment1
         public void Save() //save the updated text file
         {
             StreamWriter fileStream = File.CreateText(APPLIANCES_TEXT);
-
             foreach (Appliance appliance in appliances)
             {
                 fileStream.WriteLine(appliance.FormatForFile());
             }
-
             fileStream.Close();
-
             Console.WriteLine("File saved.");
         }
     }
